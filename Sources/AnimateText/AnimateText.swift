@@ -70,10 +70,10 @@ public struct AnimateText<E: ATTextAnimateEffect>: View {
             if !isChanged {
                 Text(text)
                     .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .multilineTextAlignment(.leading)
                     .takeSize($size)
-            }else {
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+            } else {
                 HStack(spacing: 0) {
                     ForEach(Array(elements.enumerated()), id: \.offset) { index, element in
                         let data = ATElementData(element: element,
