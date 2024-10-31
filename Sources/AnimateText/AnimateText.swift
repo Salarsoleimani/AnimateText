@@ -73,7 +73,7 @@ public struct AnimateText<E: ATTextAnimateEffect>: View {
                 Text(text)
                     .lineLimit(nil)
                     .takeSize($size)
-                    .multilineTextAlignment(.leading)
+                    .multilineTextAlignment(.center)
 
             } else {
                 GeometryReader { geometry in
