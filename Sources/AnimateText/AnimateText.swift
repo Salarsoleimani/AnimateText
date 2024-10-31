@@ -69,7 +69,8 @@ public struct AnimateText<E: ATTextAnimateEffect>: View {
         ZStack(alignment: .leading) {
             if !isChanged {
                 Text(text)
-                    .lineLimit(1)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
                     .takeSize($size)
             }else {
                 HStack(spacing: 0) {
