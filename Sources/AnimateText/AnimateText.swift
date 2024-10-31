@@ -71,8 +71,7 @@ public struct AnimateText<E: ATTextAnimateEffect>: View {
                 Text(text)
                     .lineLimit(nil)
                     .takeSize($size)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
             } else {
                 HStack(spacing: 0) {
                     ForEach(Array(elements.enumerated()), id: \.offset) { index, element in
