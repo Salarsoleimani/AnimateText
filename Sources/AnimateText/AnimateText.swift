@@ -71,6 +71,7 @@ public struct AnimateText<E: ATTextAnimateEffect>: View {
                 Text(text)
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
                     .takeSize($size)
             }else {
                 HStack(spacing: 0) {
